@@ -38,9 +38,10 @@ var arr = [
       { id: 201, parentId: 200, children: [{ id: 202, parentId: 201 }] }
     ]
   }
-  // hierchy -1, 100/200, 101/102/201, 103/202/109 -CHECK
-  // loop through array, and figure out hierchy
-  //loop again for keyword, if has none, use hierchy to find parent and pull keyword
+  // hierchy -1, 100/200, 101/102/201, 103/202/109 - CHECK
+  // loop through array, and figure out hierchy - CHECK
+  // structured with children to figure out the hiercharchy
+  //loop again for keyword, if has none, use hierchy to find parent and pull keyword - almost CHECK
 ];
 
 function solution(id, keyword) {
@@ -57,23 +58,9 @@ function solution(id, keyword) {
   return id + ` doesn't have id // where we make func looking for parents id`;
 }
 console.log(solution(100, 'keyword'));
+// passes in parameter into `solution(x)`
+// if it has keyword, it returns it. if not, says don't have keyword
+// if doesn't have an ID, returns don't have an ID
 
-// var lookup = {};
-
-// function mapIt(node) {
-//   lookup[node.id] = node;
-//   node.children;
-// }
-
-// mapIt(arr);
-// console.log(arr);
-
-// function findAncestors(nodeId) {
-//   var ancestors = [];
-//   var parentId = lookup[nodeId] && lookup[nodeId].parentId;
-//   while (parentId !== undefined) {
-//     ancestors.unshift(parentId);
-//     parentId = lookup[parentId] && lookup[parentId].parentId;
-//   }
-//   return ancestors;
-// }
+// next - in the else statement, figure out it's parent, if parent has an ID take it
+// all elements in arr have keyword, or have parent that does - all elements return something

@@ -11,6 +11,7 @@ function start() {
   }
   console.log(timer);
   // timer = undefined, also 0 or false. if not false, true, run interval
+  // once ran, gives it 1 - if click start again, nothing will happen
 }
 
 function runClock() {
@@ -44,6 +45,7 @@ function stop() {
 function stopTimer() {
   clearInterval(timer);
   timer = false;
+  // clears interval, sets timer to false to allow start() to work
 }
 
 function getTimer() {

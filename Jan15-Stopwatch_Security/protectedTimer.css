@@ -1,0 +1,14 @@
+body {
+  background: gray;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.stopwatch {
+  font-size: 7rem;
+  font-family: monospace;
+}
